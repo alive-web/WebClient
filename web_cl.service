@@ -4,7 +4,7 @@ Description=LVWEB-128 Web Client
 [Service]
 User=deploy
 Group=deploy
-Environment="APPDIR=/opt/lv128/WebClient/"
+Environment="APPDIR=/opt/lv128/WebClient"
 ExecStart=/bin/bash -c "source $APPDIR/bin/activate ; python $APPDIR/manege.py -l $APPDIR/../log/web_cl.log -p 8881"
 
 [Install]
