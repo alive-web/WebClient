@@ -10,6 +10,6 @@ def deploy():
     venv.install()
     put("server.py", ROOT)
     put("web_cl.service", ROOT)
-    run("sudo mv /web_cl.service /etc/systemd/system/" % ROOT)
+    run("sudo mv %sweb_cl.service /etc/systemd/system/" % ROOT)
     run("sudo systemctl enable web_cl")
     run("sudo systemctl restart web_cl")
