@@ -8,7 +8,7 @@ def deploy():
     if not venv.exists():
         venv.create()
     venv.install()
-    put("server.py, index.html", ROOT)
+    put("index.html", ROOT)
     put("web_cl.service", ROOT)
     run("sudo mv %sweb_cl.service /etc/systemd/system/" % ROOT)
     run("sudo systemctl enable web_cl")
