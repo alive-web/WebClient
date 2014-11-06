@@ -9,6 +9,7 @@ def deploy():
         venv.create()
     venv.install()
     put("server.py", ROOT)
+    put("style.css", ROOT)
     put("web_cl.service", ROOT)
     put("index.html", ROOT)
     put("script.js", ROOT)
