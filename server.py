@@ -21,6 +21,7 @@ class EchoWebSocket(tornado.websocket.WebSocketHandler):
         self.write_message(message)
 
     def on_close(self):
+        log.info('WebSocket closed' )
         
 application = tornado.web.Application([
     (r"/", EchoWebSocket),
