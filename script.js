@@ -1,4 +1,4 @@
-var socket = new WebSocket("ws://client.lv128.tk:8888", 'some_user');
+var socket = new WebSocket("ws://client.lv128.tk:8888");
 var message_text = document.getElementById('msg_box')
 
 function send() {
