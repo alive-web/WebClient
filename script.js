@@ -14,7 +14,7 @@ socket.onmessage = function(event) {
 
 function addMessageBlock (msg) {
 	var msg_div = document.createElement("div")
-	msg_div.innerText = msg
+	msg_div.innerHTML = msg
 	msg_div.className = "well"
 	$(msg_div).appendTo("#msg_block")
 	
