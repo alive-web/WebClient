@@ -25,7 +25,7 @@ class EchoWebSocket(tornado.websocket.WebSocketHandler):
         #log.info(message)
         msg = message
         for con in self.clients:
-            con.write_message(mg)
+            con.write_message(msg)
         #self.write_message(message)
 
     def on_close(self):
