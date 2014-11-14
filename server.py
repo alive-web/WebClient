@@ -7,7 +7,7 @@ LOG_PATH = '/opt/lv128/log/'
 
 log = logging.getLogger('socket_log')
 log.setLevel(logging.INFO)
-file_handler = logging.FileHandler(LOG_PATH +'web_client.log')
+file_handler = logging.FileHandler(LOG_PATH+'web_client.log')
 file_handler.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s - %(message)s')
 file_handler.setFormatter(formatter)
@@ -28,7 +28,6 @@ class EchoWebSocket(tornado.websocket.WebSocketHandler):
         msg = message
         for con in self.clients:
             con.write_message(msg)
-        self.write_message(message)
 
     def on_close(self):
         log.info("Connection closed")
